@@ -9,15 +9,23 @@
 const myLibrary = [];
 
 
-function Book(name ) {
+function Book(name) {
   // the constructor...
   this.name = name;
+  console.log(name);
 }
 
-const book1 = new Book("Harry Potter");
 
-alert(book1.name);
 
-function addBookToLibrary() {
-  // take params, create a book then store it in the array
+
+
+function addBookToLibrary(bookName) {
+  // take params (ex: name), create a book then store it in the array
+    Book(bookName);
+
 }
+
+
+const book1 = new Book("Hobbit");
+
+const book2 = new Book("TestBook");
