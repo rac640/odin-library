@@ -1,20 +1,23 @@
-// All of your book objects are going to be stored in an array, so you’ll need a constructor for books. 
-// Then, add a separate function to the script (not inside the constructor) that can:
-// 1.take some arguments, 2. create a book from those arguments, and 3. store the new book object into an array. 
-// Also, all of your book objects should have a unique id, which can be generated using crypto.randomUUID(). 
-// This ensures each book has a unique and stable identifier, preventing issues when books are removed or rearranged. 
-// Your code should look something like this (we’re showing only a basic skeleton without function parameters):
-
+// Next step: give all book objects a unique ID. 
 
 const myLibrary = [];
 
 
 function Book(name) {
   this.name = name;
+
+//   Assigning each book a unique ID (I might need to put the id in as a variable within Book)
+  this.id = crypto.randomUUID();
+
+  
 //   Testing to see if this returns customized name
   console.log(name);
+  console.log(id)
   return name;
 }
+
+
+
 
 
 
@@ -25,12 +28,10 @@ function addBookToLibrary(bookName) {
   // To Test: Make this into a variable and push it into array (Ex: let coolBook = Book(bookName); push coolBook into myLibrary)
     let coolBook = Book(bookName);
 
-    // Next Step: Add Book object to myLibrary Array 
     // To test this, run addBookToLibrary and make it return updated myLibrary array.  
     // To add object to array: https://stackoverflow.com/questions/6254050/how-to-add-an-object-to-an-array
     myLibrary.push(coolBook);
+
 }
 
 addBookToLibrary("Hahaha");
-addBookToLibrary("Abc");
-addBookToLibrary("Harry Potter");
