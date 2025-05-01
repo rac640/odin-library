@@ -48,7 +48,7 @@ const bookContents = document.querySelector(".bookContents");
 
 bookContents.textContent = libraryElements;
 
-
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of 
 for (const element of myLibrary){
   const divBox = document.createElement("div");
   divBox.style.border = "thick solid #0000FF";
