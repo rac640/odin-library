@@ -1,4 +1,4 @@
-// Next step: Make function to go through myLibrary and display books in a card format. 
+// Next step: Split up arrays into different divs with a border
 
 const myLibrary = [];
 
@@ -40,13 +40,23 @@ addBookToLibrary("Harry Potter");
 // In this function, I want to display myLibrary books 
 
 function displayLibrary(){
+//  Step 1: Loop through array; for each element, create a div and put the element's textContent 
 
-// Test: Display myLibrary elements 
-let libraryElements = myLibrary.toString();
+let libraryElements = myLibrary;
 
 const bookContents = document.querySelector(".bookContents");
 
 bookContents.textContent = libraryElements;
+
+
+for (const element of myLibrary){
+  const divBox = document.createElement("div");
+  divBox.style.border = "thick solid #0000FF";
+  bookContents.appendChild(divBox);
+  // AppendChild 
+}
+
+
 
 
 
