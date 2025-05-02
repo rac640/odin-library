@@ -54,7 +54,7 @@ for (const element of myLibrary){
   divBox.style.border = "1px solid black";
   bookContents.appendChild(divBox);
 
-  divBox.textContent = libraryElements;
+  divBox.textContent = element;
   // AppendChild 
 }
 
