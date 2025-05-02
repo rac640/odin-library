@@ -43,19 +43,15 @@ function displayLibrary(){
 //  Step 1: Loop through array; for each element, create a div and put the element's textContent 
 
 let libraryElements = myLibrary;
-
 const bookContents = document.querySelector(".bookContents");
 
-bookContents.textContent = libraryElements;
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of 
+// using for to loop through array: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of 
 for (const element of myLibrary){
   const divBox = document.createElement("div");
   divBox.style.border = "1px solid black";
   bookContents.appendChild(divBox);
 
-  divBox.textContent = element;
-  // AppendChild 
+  divBox.textContent = element; 
 }
 
 
