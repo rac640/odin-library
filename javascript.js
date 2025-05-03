@@ -59,8 +59,40 @@ for (const element of myLibrary){
 
 const addBookButton = document.querySelector(".addBookButton");
 
-addBookButton.addEventListener("click", bookForm);
+addBookButton.addEventListener("click", displayBookForm);
 
-function bookForm(){
-  console.log("Hi");
+function displayBookForm(){
+
+// To help create form elements: https://stackoverflow.com/questions/6964927/how-to-create-a-form-dynamically-via-javascript
+
+  let formElement = document.createElement("form");
+  
+  formElement.setAttribute('method', 'post');
+
+  let inputName = document.createElement("input");
+    inputName.setAttribute("type", "text");
+
+  let inputAuthor = document.createElement("input");
+    inputAuthor.setAttribute("type", "text");
+
+  let inputPages = document.createElement("input");
+    inputPages.setAttribute("type", "number");
+
+
+
+  formElement.appendChild(inputName);
+  formElement.appendChild(inputAuthor);
+  formElement.appendChild(inputPages);
+
+  // Append the form to the form contents div 
+
+  const formContentsDiv = document.querySelector(".formContents");
+
+  formContentsDiv.appendChild(formElement);
+
+
+
 }
+
+
+// Could use setAttribute and appendChild 
