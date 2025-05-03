@@ -1,4 +1,4 @@
-// Next step: Split up arrays into different divs with a border
+// Next step: When Button is pressed, create a form with inputs: 1. Name, 2. Author, 3. Read, 4. 
 
 const myLibrary = [];
 
@@ -50,20 +50,17 @@ for (const element of myLibrary){
   const divBox = document.createElement("div");
   divBox.style.border = "1px solid black";
   bookContents.appendChild(divBox);
-
   divBox.textContent = element; 
 }
 
-
-
-
-
-  // Step 1: Create a new div for each book  const div = document.createElement("div");
-  // for (i = 0; i < myLibrary.length +1; i++){
-    
-  //   const div = document.createElement("div");
-  //   console.log(`this is div number ${i} `);
-  // };
-
-
 };
+
+
+
+const addBookButton = document.querySelector(".addBookButton");
+
+addBookButton.addEventListener("click", bookForm);
+
+function bookForm(){
+  console.log("Hi");
+}
