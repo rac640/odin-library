@@ -1,4 +1,4 @@
-// Next step: When Button is pressed, create a form with inputs: 1. Name, 2. Author, 3. Read, 4. 
+// Next step: include input labels
 
 const myLibrary = [];
 
@@ -66,6 +66,8 @@ function displayBookForm(){
 // To help create form elements: https://stackoverflow.com/questions/6964927/how-to-create-a-form-dynamically-via-javascript
 
   let formElement = document.createElement("form");
+  formElement.style.border= "1px solid blue";
+  formElement.style.padding = "10px";
   
   formElement.setAttribute('method', 'post');
 
