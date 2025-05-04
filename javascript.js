@@ -62,15 +62,11 @@ const dialog = document.querySelector("dialog");
 
 
 const addBookButton = document.querySelector(".addBookButton");
-addBookButton.addEventListener("click", displayBookForm);
-
 
 addBookButton.addEventListener("click", ()=>{
   dialog.showModal();
-})
+});
 
-function displayBookForm(){
 
-}
 
 // Could use setAttribute and appendChild 

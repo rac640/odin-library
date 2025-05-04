@@ -14,7 +14,13 @@
 
 <dialog>
     <button autofocus>Close</button>
-    <p>This modal dialog has a groovy backdrop!</p>
+    <form action="post">
+        <label for="bookName">Book Name</label>
+        <input type="text" name="bookName" id="bookName"></input>
+        
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author">
+    </form>
   </dialog>
 <button class="addBookButton">Add Book</button>
 
