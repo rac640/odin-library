@@ -73,6 +73,12 @@ function displayBookForm(){
 
   let inputName = document.createElement("input");
     inputName.setAttribute("type", "text");
+    inputName.setAttribute("id", "inputNameID");
+    
+    let nameLabel = document.createElement('label');
+    nameLabel.setAttribute("for", "inputNameID");
+    nameLabel.textContent="Book Name";
+    formElement.appendChild(nameLabel);
 
   let inputAuthor = document.createElement("input");
     inputAuthor.setAttribute("type", "text");
