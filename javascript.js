@@ -57,50 +57,20 @@ for (const element of myLibrary){
 
 
 
-const addBookButton = document.querySelector(".addBookButton");
+const dialog = document.querySelector("dialog");
 
+
+
+const addBookButton = document.querySelector(".addBookButton");
 addBookButton.addEventListener("click", displayBookForm);
+
+
+addBookButton.addEventListener("click", ()=>{
+  dialog.showModal();
+})
 
 function displayBookForm(){
 
-// To help create form elements: https://stackoverflow.com/questions/6964927/how-to-create-a-form-dynamically-via-javascript
-
-  let formElement = document.createElement("form");
-  formElement.style.border= "1px solid blue";
-  formElement.style.padding = "10px";
-  
-  formElement.setAttribute('method', 'post');
-
-  let inputName = document.createElement("input");
-    inputName.setAttribute("type", "text");
-    inputName.setAttribute("id", "inputNameID");
-    
-    let nameLabel = document.createElement('label');
-    nameLabel.setAttribute("for", "inputNameID");
-    nameLabel.textContent="Book Name";
-    formElement.appendChild(nameLabel);
-
-  let inputAuthor = document.createElement("input");
-    inputAuthor.setAttribute("type", "text");
-
-  let inputPages = document.createElement("input");
-    inputPages.setAttribute("type", "number");
-
-
-
-  formElement.appendChild(inputName);
-  formElement.appendChild(inputAuthor);
-  formElement.appendChild(inputPages);
-
-  // Append the form to the form contents div 
-
-  const formContentsDiv = document.querySelector(".formContents");
-
-  formContentsDiv.appendChild(formElement);
-
-
-
 }
-
 
 // Could use setAttribute and appendChild 
