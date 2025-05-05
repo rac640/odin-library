@@ -57,10 +57,10 @@ for (const element of myLibrary){
 
 
 
+// Using Modals: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog
+
+
 const dialog = document.querySelector("dialog");
-
-
-
 const addBookButton = document.querySelector(".addBookButton");
 
 addBookButton.addEventListener("click", ()=>{
