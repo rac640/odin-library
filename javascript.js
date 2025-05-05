@@ -1,6 +1,4 @@
-// To Fix: the Submit Book Button: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
-// 
-// Next step: When adding a book, put the book in the myLibrary Array 
+// Next step: Displaying Library
 
 
 
@@ -61,6 +59,7 @@ for (const element of myLibrary){
 
 
 
+
 // Using Modals: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog
 
 
@@ -87,12 +86,12 @@ const submitBookButton = document.querySelector(".submitBookButton");
 submitBookButton.addEventListener("click", (event)=>{
 
   event.preventDefault();
+  bookValue = document.querySelector('#bookName').value;
+
+  // Pushing the name value into the myLibrary Array 
+  myLibrary.push(bookValue);
+
+  displayLibrary();
 
 });
 
-
-// function putBookInLibrary(event){
-//   event.preventDefault();
-//   bookValue = document.querySelector('#bookName').value;
-//   console.log("Submit the book value");
-// }
