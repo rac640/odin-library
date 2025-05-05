@@ -37,6 +37,7 @@ addBookToLibrary("Def");
 
 addBookToLibrary("Harry Potter");
 
+let bookContents = document.querySelector(".bookContents");
 
 
 // In this function, I want to display myLibrary books 
@@ -44,8 +45,6 @@ addBookToLibrary("Harry Potter");
 function displayLibrary(){
 //  Step 1: Loop through array; for each element, create a div and put the element's textContent 
 
-let libraryElements = myLibrary;
-const bookContents = document.querySelector(".bookContents");
 
 // using for to loop through array: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of 
 for (const element of myLibrary){
@@ -83,6 +82,8 @@ closeButton.addEventListener("click", () => {
 // Putting input values into array: https://stackoverflow.com/questions/47078498/javascript-add-value-from-input-box-to-array
 const submitBookButton = document.querySelector(".submitBookButton");
 
+
+// When Submit Book button is clicked, the bookValue 
 submitBookButton.addEventListener("click", (event)=>{
 
   event.preventDefault();
@@ -91,7 +92,16 @@ submitBookButton.addEventListener("click", (event)=>{
   // Pushing the name value into the myLibrary Array 
   myLibrary.push(bookValue);
 
-  displayLibrary();
 
+//  If bookContents (which acts as a display) is empty, then display the library. Else, clear the bookContents text content and display the library. 
+//  I'm proud of myself for coming up with this solution, because I wrote out the logic to solve the problem, and took a methodical approach (rather than randomly changing variables until it worked).
+
+if (bookContents.textContent==''){
+  displayLibrary();
+  }
+  else if (bookContents.textContent !==''){
+    bookContents.textContent = '';
+    displayLibrary();
+  }
 });
 
