@@ -68,5 +68,7 @@ addBookButton.addEventListener("click", ()=>{
 });
 
 
-
-// Could use setAttribute and appendChild 
+const closeButton = document.querySelector(".closeButton")
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
