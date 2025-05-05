@@ -1,3 +1,5 @@
+// To Fix: the Submit Book Button: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+// 
 // Next step: When adding a book, put the book in the myLibrary Array 
 
 
@@ -82,8 +84,15 @@ closeButton.addEventListener("click", () => {
 // Putting input values into array: https://stackoverflow.com/questions/47078498/javascript-add-value-from-input-box-to-array
 const submitBookButton = document.querySelector(".submitBookButton");
 
-submitBookButton.addEventListener("click", ()=>{
+submitBookButton.addEventListener("click", (event)=>{
 
-  bookValue = document.querySelector('#bookName').value;
-  console.log("Submit the book value");
-})
+  event.preventDefault();
+
+});
+
+
+// function putBookInLibrary(event){
+//   event.preventDefault();
+//   bookValue = document.querySelector('#bookName').value;
+//   console.log("Submit the book value");
+// }
