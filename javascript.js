@@ -1,4 +1,6 @@
-// Next step: include input labels
+// Next step: When adding a book, put the book in the myLibrary Array 
+
+
 
 const myLibrary = [];
 
@@ -72,3 +74,16 @@ const closeButton = document.querySelector(".closeButton")
 closeButton.addEventListener("click", () => {
   dialog.close();
 });
+
+
+
+// when pressing submitBookButton, put the input of book Name into myLibrary Array. 
+
+// Putting input values into array: https://stackoverflow.com/questions/47078498/javascript-add-value-from-input-box-to-array
+const submitBookButton = document.querySelector(".submitBookButton");
+
+submitBookButton.addEventListener("click", ()=>{
+
+  bookValue = document.querySelector('#bookName').value;
+  console.log("Submit the book value");
+})
