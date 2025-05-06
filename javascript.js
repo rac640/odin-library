@@ -1,4 +1,4 @@
-// Next step: Putting a delete button on each of the divs. 
+// Next step: Delete Button Functionality (Delete the div), line 61
 
 
 
@@ -54,11 +54,18 @@ for (const element of myLibrary){
   divBox.textContent = element; 
 
   // each created book div should also come with a delete button.
-
   const deleteButton = document.createElement('button');
   deleteButton.textContent = "Delete";
   divBox.appendChild(deleteButton);
+
+// When pressing delete Button, remove the div. 
+
+deleteButton.addEventListener("click", removeArrayElement);
+// Find way to target the array (Maybe IndexOf?)
+function removeArrayElement(){
+
 }
+};
 
 };
 
