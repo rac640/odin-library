@@ -1,4 +1,4 @@
-// Next step: Displaying Library
+// Next step: Putting a delete button on each of the divs. 
 
 
 
@@ -31,11 +31,11 @@ function addBookToLibrary(bookName) {
 }
 
 
-addBookToLibrary("ABC");
+// addBookToLibrary("ABC");
 
-addBookToLibrary("Def");
+// addBookToLibrary("Def");
 
-addBookToLibrary("Harry Potter");
+// addBookToLibrary("Harry Potter");
 
 let bookContents = document.querySelector(".bookContents");
 
@@ -52,6 +52,12 @@ for (const element of myLibrary){
   divBox.style.border = "1px solid black";
   bookContents.appendChild(divBox);
   divBox.textContent = element; 
+
+  // each created book div should also come with a delete button.
+
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = "Delete";
+  divBox.appendChild(deleteButton);
 }
 
 };
