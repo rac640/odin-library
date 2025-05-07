@@ -1,8 +1,13 @@
-// Next step: Delete Button Functionality (Delete the div), line 61
+// Next step: Delete Button Functionality
+// Give a unique ID to the Book Objects 
+// (Delete the div), line 61
 
 
 
 const myLibrary = [];
+
+// Delete Button for created divs
+
 
 
 function Book(name) {
@@ -29,6 +34,7 @@ function addBookToLibrary(bookName) {
     myLibrary.push(coolBook);
 
 }
+
 
 
 // addBookToLibrary("ABC");
@@ -58,16 +64,15 @@ for (const element of myLibrary){
   deleteButton.textContent = "Delete";
   divBox.appendChild(deleteButton);
 
-// When pressing delete Button, remove the div. 
+// When pressing delete Button, remove the div. How? 
 
-deleteButton.addEventListener("click", removeArrayElement);
-// Find way to target the array (Maybe IndexOf?)
-function removeArrayElement(){
 
-}
-};
+
 
 };
+
+};
+
 
 
 
@@ -103,7 +108,7 @@ submitBookButton.addEventListener("click", (event)=>{
   bookValue = document.querySelector('#bookName').value;
 
   // Pushing the name value into the myLibrary Array 
-  myLibrary.push(bookValue);
+  myLibrary.push(Book(bookValue));
 
 
 //  If bookContents (which acts as a display) is empty, then display the library. Else, clear the bookContents text content and display the library. 
