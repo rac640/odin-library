@@ -1,6 +1,5 @@
 // Next step: Delete Button Functionality
-// Give a unique ID to the Book Objects 
-// (Delete the div), line 61
+// Delete the object associated with the div. 
 
 
 
@@ -62,8 +61,6 @@ for (const element of myLibrary){
 
   divBox.setAttribute("data-id", element.id);
 
-
-
   
   // each created book div should also come with a delete button.
   const deleteButton = document.createElement('button');
@@ -71,7 +68,12 @@ for (const element of myLibrary){
   divBox.appendChild(deleteButton);
 
   deleteButton.addEventListener("click", ()=>{
+    // remove the associated div box
     divBox.remove();
+
+    // remove the associated object from myLibrary with the same ID. 
+
+    myLibrary.splice[element.id, 1];
 
   });
 
@@ -116,6 +118,7 @@ submitBookButton.addEventListener("click", (event)=>{
 
   event.preventDefault();
   bookValue = document.querySelector('#bookName').value;
+  
 
   // Pushing the name value into the myLibrary Array 
   myLibrary.push(Book(bookValue));
