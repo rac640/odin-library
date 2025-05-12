@@ -1,6 +1,4 @@
-// Next step: Delete Button Functionality
-// Delete the object associated with the div. 
-
+// TO SOLVE LATER: Removing the object associated with div ID. 
 
 
 const myLibrary = [];
@@ -18,8 +16,9 @@ function Book(name) {
   
 //   Testing to see if this returns customized name
   console.log(name);
-  console.log(id);
-  return name;
+  console.log(this.id);
+ 
+
 }
 
 
@@ -59,7 +58,7 @@ for (const element of myLibrary){
   divBox.textContent = element; 
   // Set the ID of the div to the ID of the element (in this case, the Book object ID).
 
-  divBox.setAttribute("data-id", element.id);
+  divBox.setAttribute("id", element.id);
 
   
   // each created book div should also come with a delete button.
@@ -71,9 +70,11 @@ for (const element of myLibrary){
     // remove the associated div box
     divBox.remove();
 
-    // remove the associated object from myLibrary with the same ID. 
 
-    myLibrary.splice[element.id, 1];
+    // Find the index of the book with the same ID as the div. 
+    const index = myLibrary.findIndex(book => book.id == divBox.id);
+    
+    myLibrary.splice(index, 1); // Remove from array
 
   });
 
@@ -121,7 +122,7 @@ submitBookButton.addEventListener("click", (event)=>{
   
 
   // Pushing the name value into the myLibrary Array 
-  myLibrary.push(Book(bookValue));
+  myLibrary.push(new Book(bookValue));
 
 
 //  If bookContents (which acts as a display) is empty, then display the library. Else, clear the bookContents text content and display the library. 
