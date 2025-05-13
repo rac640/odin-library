@@ -1,5 +1,4 @@
-// Next step: Put Object name 
-
+// Next step: If book has been read, put a "This book has been read" message (line 80)
 const myLibrary = [];
 
 // Delete Button for created divs
@@ -78,7 +77,10 @@ for (const element of myLibrary){
   });
 
 
-
+  // Pseudocode:
+  // 1. Get the ID of the input.
+  // 2. Write code: if the input is pressed, then append a "this book has been read" div 
+  // 3. Align the message to the very left of the div (align:right)
 
 
 };
@@ -135,4 +137,7 @@ if (bookContents.textContent==''){
     displayLibrary();
   }
 });
+
+
+
 
