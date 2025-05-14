@@ -78,15 +78,26 @@ for (const element of myLibrary){
 
 
   // Pseudocode:
-  // 1. Get the ID of the input.
-  // 2. Write code: if the input is pressed, then append a "this book has been read" div 
-  // 3. Align the message to the very left of the div (align:right)
+  // Step 1: If "read" box is checked, then put something that says "This book has been read"
+
+  // For each element of myLibrary, create a button: Read or not read. 
+  
+let read = document.querySelector("#read");
+
+if (read.checked==true){
+  console.log("I'm checked!");
+}
+else{
+  console.log("I'm not checked!");
+}
+
+
+
+
+}
 
 
 };
-
-};
-
 
 
 
