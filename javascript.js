@@ -20,6 +20,18 @@ function Book(name) {
 }
 
 
+
+// To facilitate this you will want to create Book prototype function that toggles a book instance’s read status.
+// 
+Book.prototype.readToggle=function(){
+  console.log(`I read ${this.name}!`);
+}
+
+
+
+
+
+
 function addBookToLibrary(bookName) {
   // take params (ex: name), create a book then store it in the array
   // To Test: Make this into a variable and push it into array (Ex: let coolBook = Book(bookName); push coolBook into myLibrary
@@ -75,29 +87,11 @@ for (const element of myLibrary){
     myLibrary.splice(index, 1); // Remove from array
 
   });
-
-
-  // Pseudocode:
-  // Step 1: If "read" box is checked, then put something that says "This book has been read"
-
-  // For each element of myLibrary, create a button: Read or not read. 
-  
-let read = document.querySelector("#read");
-
-if (read.checked==true){
-  console.log("I'm checked!");
-}
-else{
-  console.log("I'm not checked!");
-}
-
-
-
-
 }
 
 
 };
+
 
 
 
