@@ -22,7 +22,7 @@ function Book(name) {
 
 
 // To facilitate this you will want to create Book prototype function that toggles a book instance’s read status.
-// 
+// Pseudocode to put in line 91: If the read button is clicked, then it should console.log the name of the book. 
 Book.prototype.readToggle=function(){
   console.log(`I read ${this.name}!`);
 }
@@ -87,6 +87,8 @@ for (const element of myLibrary){
     myLibrary.splice(index, 1); // Remove from array
 
   });
+
+
 }
 
 
