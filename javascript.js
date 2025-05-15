@@ -88,6 +88,14 @@ for (const element of myLibrary){
 
   });
 
+// Pseudocode to put in line 91: If the read button is clicked, then it should console.log the name of the book. 
+let readCheckbox =document.querySelector("#read");
+if (readCheckbox.checked==true){
+  element.readToggle();
+}
+else{
+  console.log("I haven't been checked")
+}
 
 }
 
