@@ -1,4 +1,8 @@
 // Next step: If book has been read, put a "This book has been read" message (line 80)
+
+// Problem:
+// 
+// Possible solution: Get the ID of that specific div, then turn that div green. 
 const myLibrary = [];
 
 // Delete Button for created divs
@@ -13,8 +17,6 @@ function Book(name) {
 
   
 //   Testing to see if this returns customized name
-  console.log(name);
-  console.log(this.id);
  
 
 }
@@ -60,11 +62,9 @@ for (const element of myLibrary){
   bookContents.appendChild(divBox);
   divBox.textContent = element.name; 
   // Set the ID of the div to the ID of the element (in this case, the Book object ID).
-
   divBox.setAttribute("id", element.id);
 
-  
-  // each created book div should also come with a delete button.
+    // each created book div should also come with a delete button.
   const deleteButton = document.createElement('button');
   deleteButton.textContent = "Delete";
   divBox.appendChild(deleteButton);
@@ -84,12 +84,11 @@ for (const element of myLibrary){
 // Pseudocode: If the read button is checked, then it should activate the readToggle function and take the divBox as a variable. 
 let readCheckbox =document.querySelector("#read");
 if (readCheckbox.checked==true){
-  
-  element.readToggle(divBox);
+      
+  // Find the ias the div (maybe getElementById?)
+      element.readToggle(divBox);
 }
-else{
-  console.log("I haven't been checked")
-}
+
 
 }
 
@@ -145,6 +144,8 @@ if (bookContents.textContent==''){
     bookContents.textContent = '';
     displayLibrary();
   }
+
+  console.log(myLibrary);
 });
 
 
