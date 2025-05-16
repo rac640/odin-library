@@ -23,8 +23,9 @@ function Book(name) {
 
 // To facilitate this you will want to create Book prototype function that toggles a book instance’s read status.
 // Pseudocode to put in line 91: If the read button is clicked, then it should console.log the name of the book. 
-Book.prototype.readToggle=function(){
-  console.log(`I read ${this.name}!`);
+Book.prototype.readToggle=function(divCard){
+  // This function should take the divBox and turn it green 
+  divCard.style.backgroundColor = "green";
 }
 
 
@@ -42,14 +43,6 @@ function addBookToLibrary(bookName) {
     myLibrary.push(coolBook);
 
 }
-
-
-
-// addBookToLibrary("ABC");
-
-// addBookToLibrary("Def");
-
-// addBookToLibrary("Harry Potter");
 
 let bookContents = document.querySelector(".bookContents");
 
@@ -88,10 +81,10 @@ for (const element of myLibrary){
 
   });
 
-// Pseudocode to put in line 91: If the read button is clicked, then it should console.log the name of the book. 
+// Pseudocode  If the read button is checked, then it should activate the readToggle function and take the divBox as a variable. 
 let readCheckbox =document.querySelector("#read");
 if (readCheckbox.checked==true){
-  element.readToggle();
+  element.readToggle(divBox);
 }
 else{
   console.log("I haven't been checked")
