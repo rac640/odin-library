@@ -81,9 +81,10 @@ for (const element of myLibrary){
 
   });
 
-// Pseudocode  If the read button is checked, then it should activate the readToggle function and take the divBox as a variable. 
+// Pseudocode: If the read button is checked, then it should activate the readToggle function and take the divBox as a variable. 
 let readCheckbox =document.querySelector("#read");
 if (readCheckbox.checked==true){
+  
   element.readToggle(divBox);
 }
 else{
