@@ -81,15 +81,6 @@ for (const element of myLibrary){
 
   });
 
-// Pseudocode: If the read button is checked, then it should activate the readToggle function and take the divBox as a variable. 
-let readCheckbox =document.querySelector("#read");
-if (readCheckbox.checked==true){
-      
-  // Find the ias the div (maybe getElementById?)
-      element.readToggle(divBox);
-}
-
-
 }
 
 
@@ -145,7 +136,22 @@ if (bookContents.textContent==''){
     displayLibrary();
   }
 
-  console.log(myLibrary);
+
+
+  // Pseudocode: When pressing submit button, scan to see if checkbox is checked. If it is, then change background color to green. 
+
+  let readCheckbox =document.querySelector("#read");
+  if (readCheckbox.checked == true){
+
+    // go to the last element of the myLibrary Array. Turn that background color green. 
+
+    // nodelist of divs in the bookContents 
+
+    let nodeList = document.querySelectorAll(".bookContents > div");
+    nodeList[myLibrary.length-1].style.backgroundColor ="green";
+
+  }
+
 });
 
 
