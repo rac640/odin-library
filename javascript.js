@@ -65,13 +65,19 @@ for (const element of myLibrary){
 
 
   // Each div should come with a button that says if it's been read or not read. 
-  const readOrNot = document.createElement("button");
-  readOrNot.textContent = "Not Read";
+  const readOrNotButton = document.createElement("button");
+  readOrNotButton.textContent = "Not Read";
   // Add a custom attribute for button, wher the value would be the object book ID (or div id).
-  readOrNot.setAttribute("data-id", element.id);
-  divBox.appendChild(readOrNot);
+  readOrNotButton.setAttribute("data-id", element.id);
+  divBox.appendChild(readOrNotButton);
   console.log(divBox);
 
+  // When clicking the readOrNotButton, it should turn that element's divBox green.
+  readOrNotButton.addEventListener("click", ()=>{
+    
+    divBox.style.backgroundColor = "green";
+
+  });
 
     // each created book div should also come with a delete button.
   const deleteButton = document.createElement('button');
