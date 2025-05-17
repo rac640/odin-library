@@ -1,7 +1,5 @@
-// Next step: If book has been read, put a "This book has been read" message (line 80)
-
-// Problem:
-// 
+// Goal: Make specific div green. 
+// How? Targeting ID. 
 // Possible solution: Get the ID of that specific div, then turn that div green. 
 const myLibrary = [];
 
@@ -14,6 +12,7 @@ function Book(name) {
 
 //   COME BACK TO THIS ONE Assigning each book a unique ID (I might need to put the id in as a variable within Book)
   this.id = crypto.randomUUID();
+
 
   
 //   Testing to see if this returns customized name
@@ -63,6 +62,16 @@ for (const element of myLibrary){
   divBox.textContent = element.name; 
   // Set the ID of the div to the ID of the element (in this case, the Book object ID).
   divBox.setAttribute("id", element.id);
+
+
+  // Each div should come with a button that says if it's been read or not read. 
+  const readOrNot = document.createElement("button");
+  readOrNot.textContent = "Not Read";
+  // Add a custom attribute for button, wher the value would be the object book ID (or div id).
+  readOrNot.setAttribute("data-id", element.id);
+  divBox.appendChild(readOrNot);
+  console.log(divBox);
+
 
     // each created book div should also come with a delete button.
   const deleteButton = document.createElement('button');
@@ -119,10 +128,10 @@ submitBookButton.addEventListener("click", (event)=>{
 
   event.preventDefault();
   bookValue = document.querySelector('#bookName').value;
-  
-
   // Pushing the name value into the myLibrary Array 
   myLibrary.push(new Book(bookValue));
+
+
 
 
 //  If bookContents (which acts as a display) is empty, then display the library. Else, clear the bookContents text content and display the library. 
@@ -138,17 +147,14 @@ if (bookContents.textContent==''){
 
 
 
-  // Pseudocode: When pressing submit button, scan to see if checkbox is checked. If it is, then change background color to green. 
+  // Pseudocode: When pressing submit button, scan to see if checkbox is checked. If it is, then give the div a class of checked.
+  // In CSS: set the background color to green for the checked class. 
 
   let readCheckbox =document.querySelector("#read");
   if (readCheckbox.checked == true){
 
-    // go to the last element of the myLibrary Array. Turn that background color green. 
-
-    // nodelist of divs in the bookContents 
-
     let nodeList = document.querySelectorAll(".bookContents > div");
-    nodeList[myLibrary.length-1].style.backgroundColor ="green";
+    console.log(nodeList[myLibrary.length-1].style.backgroundColor ="green");
 
   }
 
