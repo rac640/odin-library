@@ -1,6 +1,10 @@
-// Goal: Make specific div green. 
-// How? Targeting ID. 
-// Possible solution: Get the ID of that specific div, then turn that div green. 
+// Next: Add more parameters to the Book Object (like the input fields), put the other parameters into the divs, and style the divs so they look more like cards. 
+
+// Problem: When I add a new book, the green goes away (I'll probably have to use custom attributes to access the myLibrary elements, 
+// and create a status parameter the Book Object) 
+
+
+
 const myLibrary = [];
 
 // Delete Button for created divs
@@ -75,7 +79,17 @@ for (const element of myLibrary){
   // When clicking the readOrNotButton, it should turn that element's divBox green.
   readOrNotButton.addEventListener("click", ()=>{
     
+    if (readOrNotButton.textContent=="Not Read"){
     divBox.style.backgroundColor = "green";
+    readOrNotButton.textContent ="Read";
+  }
+
+  else{
+    divBox.style.backgroundColor ="white";
+    readOrNotButton.textContent ="Not Read";
+
+  }
+
 
   });
 
