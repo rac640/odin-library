@@ -1,5 +1,4 @@
-// Next: Add more parameters to the Book Object (like the input fields), put the other parameters into the divs, and style the divs so they look more like cards. 
-
+// Make the div cards look like actual cards. 
 // Problem: When I add a new book, the green goes away (I'll probably have to use custom attributes to access the myLibrary elements, 
 // and create a status parameter the Book Object) 
 
@@ -70,6 +69,7 @@ for (const element of myLibrary){
   divBox.textContent = `Name: ${element.name} Author: ${element.author} Pages: ${element.pages}`; 
   // Set the ID of the div to the ID of the element (in this case, the Book object ID).
   divBox.setAttribute("id", element.id);
+  divBox.setAttribute("class", "div-box");
 
 
   // Each div should come with a button that says if it's been read or not read. 
