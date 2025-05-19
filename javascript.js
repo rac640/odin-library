@@ -11,8 +11,10 @@ const myLibrary = [];
 
 
 
-function Book(name) {
+function Book(name, author, pages) {
   this.name = name;
+  this.author = author;
+  this.pages = pages; 
 
 //   COME BACK TO THIS ONE Assigning each book a unique ID (I might need to put the id in as a variable within Book)
   this.id = crypto.randomUUID();
@@ -147,10 +149,15 @@ const submitBookButton = document.querySelector(".submitBookButton");
 submitBookButton.addEventListener("click", (event)=>{
 
   event.preventDefault();
-  bookValue = document.querySelector('#bookName').value;
-  // Pushing the name value into the myLibrary Array 
-  myLibrary.push(new Book(bookValue));
+  bookNameValue = document.querySelector('#bookName').value;
+  bookAuthorValue = document.querySelector('#author').value;
+  bookPagesValue = document.querySelector('#pages').value;
 
+  // Pushing the name, author, and page values into the myLibrary Array 
+  myLibrary.push(new Book(bookNameValue, bookAuthorValue, bookPagesValue));
+
+
+ 
 
 
 
