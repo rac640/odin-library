@@ -65,7 +65,9 @@ for (const element of myLibrary){
   const divBox = document.createElement("div");
   divBox.style.border = "1px solid black";
   bookContents.appendChild(divBox);
-  divBox.textContent = element.name; 
+  
+  // pushing the Book Name, author, and pages into the divs. 
+  divBox.textContent = `Name: ${element.name} Author: ${element.author} Pages: ${element.pages}`; 
   // Set the ID of the div to the ID of the element (in this case, the Book object ID).
   divBox.setAttribute("id", element.id);
 
