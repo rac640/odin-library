@@ -19,8 +19,6 @@ h1{
 }
 
 
-
-
 .addBookButton{
     border-radius: 10px;
     border: 1px solid black;
@@ -31,5 +29,10 @@ h1{
 
     text-align: center;
     padding: 10px;
+
+}
+
+dialog, input, button{
+    border-radius: 10px;
 
 }
