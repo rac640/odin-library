@@ -176,16 +176,7 @@ if (bookContents.textContent==''){
 
 
 
-  // Pseudocode: When pressing submit button, scan to see if checkbox is checked. If it is, then give the div a class of checked.
-  // In CSS: set the background color to green for the checked class. 
 
-  let readCheckbox =document.querySelector("#read");
-  if (readCheckbox.checked == true){
-
-    let nodeList = document.querySelectorAll(".bookContents > div");
-    console.log(nodeList[myLibrary.length-1].style.backgroundColor ="green");
-
-  }
 
 });
 
