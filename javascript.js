@@ -2,13 +2,9 @@
 // Problem: When I add a new book, the green goes away (I'll probably have to use custom attributes to access the myLibrary elements, 
 // and create a status parameter the Book Object) 
 
-
-
 const myLibrary = [];
 
 // Delete Button for created divs
-
-
 
 function Book(name, author, pages) {
   this.name = name;
@@ -17,14 +13,9 @@ function Book(name, author, pages) {
 
 //   COME BACK TO THIS ONE Assigning each book a unique ID (I might need to put the id in as a variable within Book)
   this.id = crypto.randomUUID();
-
-
-  
 //   Testing to see if this returns customized name
- 
 
 }
-
 
 
 // To facilitate this you will want to create Book prototype function that toggles a book instance’s read status.
@@ -77,6 +68,7 @@ for (const element of myLibrary){
   readOrNotButton.textContent = "Not Read";
   // Add a custom attribute for button, wher the value would be the object book ID (or div id).
   readOrNotButton.setAttribute("data-id", element.id);
+  console.log(readOrNotButton.id);
   divBox.appendChild(readOrNotButton);
   console.log(divBox);
 
