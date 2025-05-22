@@ -36,3 +36,8 @@ dialog, input, button{
     border-radius: 10px;
 
 }
+
+
+.read{
+    background-color: green;
+}
