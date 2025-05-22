@@ -1,15 +1,16 @@
-// Make the div cards look like actual cards. 
+// Next step: Add a status parameter in the Book Object. 
 // Problem: When I add a new book, the green goes away (I'll probably have to use custom attributes to access the myLibrary elements, 
-// and create a status parameter the Book Object) 
+// and create a status parameter for the Book Object) 
 
 const myLibrary = [];
 
 // Delete Button for created divs
 
-function Book(name, author, pages) {
+function Book(name, author, pages, read) {
   this.name = name;
   this.author = author;
   this.pages = pages; 
+  this.read = "true";
 
 //   COME BACK TO THIS ONE Assigning each book a unique ID (I might need to put the id in as a variable within Book)
   this.id = crypto.randomUUID();
@@ -68,14 +69,16 @@ for (const element of myLibrary){
   readOrNotButton.textContent = "Not Read";
   // Add a custom attribute for button, wher the value would be the object book ID (or div id).
   readOrNotButton.setAttribute("data-id", element.id);
-  console.log(readOrNotButton.id);
   divBox.appendChild(readOrNotButton);
   console.log(divBox);
 
   // When clicking the readOrNotButton, it should turn that element's divBox green.
   readOrNotButton.addEventListener("click", ()=>{
-    
+
+    // If the button is pressed, then it should change the status of the book element to true. 
+
     if (readOrNotButton.textContent=="Not Read"){
+
     divBox.style.backgroundColor = "green";
     readOrNotButton.textContent ="Read";
   }
