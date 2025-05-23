@@ -10,7 +10,7 @@ function Book(name, author, pages, read) {
   this.name = name;
   this.author = author;
   this.pages = pages; 
-  this.read = "true";
+  this.read = false;
 
 //   COME BACK TO THIS ONE Assigning each book a unique ID (I might need to put the id in as a variable within Book)
   this.id = crypto.randomUUID();
@@ -25,7 +25,6 @@ Book.prototype.readToggle=function(divCard){
   // This function should take the divBox and turn it green 
   divCard.style.backgroundColor = "green";
 }
-
 
 
 
