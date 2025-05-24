@@ -76,6 +76,9 @@ for (const element of myLibrary){
   readOrNotButton.addEventListener("click", ()=>{
 
     // If the button is pressed, then it should change the status of the book element to true. 
+  console.log(element.read);
+
+
 
   //   if (readOrNotButton.textContent=="Not Read"){
 
