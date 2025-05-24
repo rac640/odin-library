@@ -75,22 +75,17 @@ for (const element of myLibrary){
   // When clicking the readOrNotButton, it should turn that element's divBox green.
   readOrNotButton.addEventListener("click", ()=>{
 
-    // If the button is pressed, then it should change the status of the book element to true. 
-  console.log(element.read);
+    if (readOrNotButton.textContent=="Not Read"){
 
+    divBox.style.backgroundColor = "green";
+    readOrNotButton.textContent ="Read";
+  }
 
+  else{
+    divBox.style.backgroundColor ="white";
+    readOrNotButton.textContent ="Not Read";
 
-  //   if (readOrNotButton.textContent=="Not Read"){
-
-  //   divBox.style.backgroundColor = "green";
-  //   readOrNotButton.textContent ="Read";
-  // }
-
-  // else{
-  //   divBox.style.backgroundColor ="white";
-  //   readOrNotButton.textContent ="Not Read";
-
-  // }
+  }
 
 
   });
@@ -149,13 +144,20 @@ const submitBookButton = document.querySelector(".submitBookButton");
 submitBookButton.addEventListener("click", (event)=>{
 
   event.preventDefault();
+
   bookNameValue = document.querySelector('#bookName').value;
   bookAuthorValue = document.querySelector('#author').value;
   bookPagesValue = document.querySelector('#pages').value;
 
+  if (bookNameValue == "" || bookAuthorValue=="" || bookPagesValue==""){
+    const consoleErrorMessage = new Error("Could not parse input");
+    throw consoleErrorMessage;
+  }
+
   // Pushing the name, author, and page values into the myLibrary Array 
   myLibrary.push(new Book(bookNameValue, bookAuthorValue, bookPagesValue));
 
+  
 
  
 
