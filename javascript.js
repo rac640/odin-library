@@ -67,12 +67,13 @@ for (const element of myLibrary){
   const readOrNotButton = document.createElement("button");
   readOrNotButton.textContent = "Not Read";
   // Add a custom attribute for button, wher the value would be the object book ID (or div id).
-  readOrNotButton.setAttribute("data-id", element.id);
+  readOrNotButton.setAttribute("data-idData", element.id);
   divBox.appendChild(readOrNotButton);
-  console.log(divBox);
 
   // When clicking the readOrNotButton, it should turn that element's divBox green.
   readOrNotButton.addEventListener("click", ()=>{
+
+    console.log(readyOrNot);
 
     // If the button is pressed, then it should change the status of the book element to true. 
 
