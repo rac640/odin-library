@@ -75,22 +75,21 @@ for (const element of myLibrary){
   readOrNotButton.addEventListener("click", ()=>{
     // on the first click, it should make the element.read true. 
 
-    console.log(element.read = element.read ? false : true);
+    // Toggle between true and false states: 
+    element.read = element.read ? false : true;
 
+      if (element.read ==true){
+        element.read= true;
+      divBox.style.backgroundColor = "green";
+      readOrNotButton.textContent ="Read";
+    }
 
-    if (element.read ==true){
-      element.read= true;
+    else if (element.read == false){
+      divBox.style.backgroundColor ="white";
+      readOrNotButton.textContent ="Not Read";
+      element.read = false;
 
-    divBox.style.backgroundColor = "green";
-    readOrNotButton.textContent ="Read";
-  }
-
-  else if (element.read == false){
-    divBox.style.backgroundColor ="white";
-    readOrNotButton.textContent ="Not Read";
-    element.read = false;
-
-  }
+    }
 
 
   });
