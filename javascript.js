@@ -70,20 +70,25 @@ for (const element of myLibrary){
   readOrNotButton.setAttribute("button-id", element.id);
   divBox.appendChild(readOrNotButton);
 
-  console.log(readOrNotButton);
 
-  // When clicking the readOrNotButton, it should turn that element's divBox green.
+  // When clicking the readOrNotButton,it should toggle between read being true or false. 
   readOrNotButton.addEventListener("click", ()=>{
+    // on the first click, it should make the element.read true. 
 
-    if (readOrNotButton.textContent=="Not Read"){
+    console.log(element.read = element.read ? false : true);
+
+
+    if (element.read ==true){
+      element.read= true;
 
     divBox.style.backgroundColor = "green";
     readOrNotButton.textContent ="Read";
   }
 
-  else{
+  else if (element.read == false){
     divBox.style.backgroundColor ="white";
     readOrNotButton.textContent ="Not Read";
+    element.read = false;
 
   }
 
