@@ -73,9 +73,8 @@ for (const element of myLibrary){
 
   // When clicking the readOrNotButton,it should toggle between read being true or false. 
   readOrNotButton.addEventListener("click", ()=>{
-    // on the first click, it should make the element.read true. 
 
-    // Toggle between true and false states: 
+    // Toggle between true and false states: https://www.geeksforgeeks.org/how-to-toggle-a-boolean-using-javascript/
     element.read = element.read ? false : true;
 
       if (element.read ==true){
@@ -93,6 +92,19 @@ for (const element of myLibrary){
 
 
   });
+
+  if (element.read ==true){
+    element.read= true;
+  divBox.style.backgroundColor = "green";
+  readOrNotButton.textContent ="Read";
+}
+
+else if (element.read == false){
+  divBox.style.backgroundColor ="white";
+  readOrNotButton.textContent ="Not Read";
+  element.read = false;
+
+}
 
     // each created book div should also come with a delete button.
   const deleteButton = document.createElement('button');
