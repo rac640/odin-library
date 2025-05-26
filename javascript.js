@@ -1,6 +1,4 @@
-// Next step: Add a status parameter in the Book Object. 
-// Problem: When I add a new book, the green goes away (I'll probably have to use custom attributes to access the myLibrary elements, 
-// and create a status parameter for the Book Object) 
+// Next step: Make name, author, and pages their own line in the div. 
 
 const myLibrary = [];
 
@@ -57,7 +55,7 @@ for (const element of myLibrary){
   bookContents.appendChild(divBox);
   
   // pushing the Book Name, author, and pages into the divs. 
-  divBox.textContent = `Name: ${element.name} Author: ${element.author} Pages: ${element.pages}`; 
+  divBox.textContent = ` Name: ${element.name} Author: ${element.author} Pages: ${element.pages}`; 
   
   // Set the ID of the div to the ID of the element (in this case, the Book object ID).
   divBox.setAttribute("id", element.id);
