@@ -58,6 +58,7 @@ for (const element of myLibrary){
   
   // pushing the Book Name, author, and pages into the divs. 
   divBox.textContent = `Name: ${element.name} Author: ${element.author} Pages: ${element.pages}`; 
+  
   // Set the ID of the div to the ID of the element (in this case, the Book object ID).
   divBox.setAttribute("id", element.id);
   divBox.setAttribute("class", "div-box");
@@ -94,17 +95,11 @@ for (const element of myLibrary){
   });
 
   if (element.read ==true){
-    element.read= true;
   divBox.style.backgroundColor = "green";
   readOrNotButton.textContent ="Read";
 }
 
-else if (element.read == false){
-  divBox.style.backgroundColor ="white";
-  readOrNotButton.textContent ="Not Read";
-  element.read = false;
 
-}
 
     // each created book div should also come with a delete button.
   const deleteButton = document.createElement('button');
