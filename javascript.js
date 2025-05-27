@@ -105,7 +105,7 @@ for (const element of myLibrary){
   });
 
   if (element.read ==true){
-  divBox.style.backgroundColor = "green";
+  divBox.setAttribute("class", "greenDiv");
   readOrNotButton.textContent ="Read";
 }
 
